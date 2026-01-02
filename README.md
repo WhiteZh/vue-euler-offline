@@ -1,8 +1,6 @@
-Project Euler Problems Offline
-====
+# Vue (View) Project Euler Problems Offline
 
-Use when you want to solve Project Euler problems when not connected to the internet.
+Compiles [davidcorbin's euler-offline](https://github.com/davidcorbin/euler-offline) into a more convenient webpage.
 
-Includes questions and answers (hashed).
 
-For a user-friendly way of working through Project Euler problems, checkout @dmadisetti's project: https://github.com/dmadisetti/rules_euler
+Original README can can be found [here](README.old.md).
