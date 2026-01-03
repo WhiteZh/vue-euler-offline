@@ -49,20 +49,24 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="flex flex-col items-center gap-10 px-10">
-    <div v-for="(problem, idx) in problems" :key="problem.title" class="font-mono">
-      <h1 class="text-lg italic">{{ problem.title }}</h1>
-      <div class="whitespace-pre">
-        {{ problem.description }}
-      </div>
-      <div class="flex flex-row justify-center mt-7 gap-2">
-        <input class="min-w-36 px-2 border rounded-md text-sm field-sizing-content text-center"
-               :ref="el => inputs.set(problem.title, el as HTMLInputElement)"/>
-        <button
-            class="cursor-pointer border rounded-full px-2 hover:bg-neutral-300 active:bg-neutral-500"
-            @click="checkAnswer(problem.title, problem)">
-          check
-        </button>
+  <div class="flex flex-col items-center">
+    <div class="flex flex-col items-stretch gap-10 px-10">
+      <div v-for="(problem, idx) in problems" :key="problem.title" class="font-mono">
+        <h1 class="text-lg italic text-center mb-1">{{ problem.title }}</h1>
+        <div class="flex flex-col items-center">
+          <div class="whitespace-pre">
+            {{ problem.description }}
+          </div>
+          <div class="flex flex-row justify-center mt-7 gap-2">
+            <input class="min-w-36 px-2 border rounded-md text-sm field-sizing-content text-center"
+                   :ref="el => inputs.set(problem.title, el as HTMLInputElement)"/>
+            <button
+                class="cursor-pointer border rounded-full px-2 hover:bg-neutral-300 active:bg-neutral-500"
+                @click="checkAnswer(problem.title, problem)">
+              check
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
